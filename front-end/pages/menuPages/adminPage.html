@@ -3,9 +3,21 @@
     <head lang="en">
         <meta charset="utf-8">
         <title>Admin Page</title>
-    <link rel="stylessheet" href="adminPage.css">
+        <link href="./adminPage.css" rel="stylesheet">
+
     </head>
     <body>
         <script src="adminPage.js"></script>
+        <div>Input Admin Password to Upload and Download excel Files</div>
+        <input>
+        <div class="container">
+            <div id="upload-button">
+                Upload Your File Here
+                <input type="file" id="excel" name="judgeData.excel" accept="excel/">
+            </div>
+            <div id="download-button">
+                <a href="NotApproved" download="judgeData.excel" target="_blank">Download Your File Here</a>
+            </div>
+        </div>
     </body>
 </html>

@@ -7,5 +7,37 @@
     </head>
     <body>
         <script src="judge.js"></script>
+        <div id="top">
+            <div>Please Select a student to Judge</div>
+            <input type="number">
+            <button id="addStudent">Add Student</button>
+        </div>
+        <div id="judgingScreen">
+            <div id="student-tabs">
+                <div id="student1">1</div>
+            </div>
+            <div id="formField">
+                <fieldset name="jumps">
+                    <legend>Jumps</legend>
+                    <label for="toe-touch">Toe Touch (1-5)</label>
+                    <input name= "toe-touch"type="number">
+                    <label for="2nd-Jump">2nd Jump (1-5)</label>
+                    <input name="2nd-Jump" type="number">
+                    
+                </fieldset>
+                <fieldset name="band-chat">
+                    <legend>Band Chant</legend>
+                </fieldset>
+                <fieldset name="situational-sideline">
+                    <legend>Situational Sideline</legend>
+                </fieldset>
+                <fieldset name="Cheer">
+                    <legend>Cheer</legend>
+                </fieldset>
+                <label for="back-handspring">Back Handspring</label>
+                <input type="checkbox" id="back-handspring">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
     </body>
 </html>

@@ -1,0 +1,15 @@
+.container{
+    border-color:black;
+    border-style:solid;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    width:30vw;
+    margin-left:35vw;
+    margin-right:calc(50vw-40vw);
+    height:10vw;
+}
+div div{
+    width:100px;
+    text-align:center;
+}
