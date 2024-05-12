@@ -1,34 +1,3 @@
-class student{
-    constructor(number){
-        this.contestantNumber=number;
-        //variables for jumps
-        this.toeTouch=0;
-        this.secondJump=0;
-        this.overallGameDayAppealJump=0;
-        //variables for band chant
-        this.bandChantMotions=0;
-        this.knowledgeOfCadence=0;
-        this.bandChantShowmanship=0;
-        this.rythm=0;
-        this.chantProjectionAndClarity=0;
-        this.chantOverrallAppeal=0;
-        //variables for situational sideline
-        this.sidelineMotions=0;
-        this.knowledgeOfChant=0;
-        this.situationalShowmanship=0;
-        this.sidelineVoice=0;
-        this.sideLineOverrallAppeal=0;
-        //variables for cheer
-        this.cheerMotions=0;
-        this.knowledgeOfCheer=0;
-        this.cheerShowmanship=0;
-        this.cheerVoice=0;
-        this.skillJump=0;
-        this.cheerOverrallAppeal=0;
-        //Back Handspring
-        this.backHandSpring=0;
-    }
-}
 const studentMap=new Map();
 const addStudent=document.querySelector("#addStudent");
 const studentTabs=document.querySelector("#student-tabs");
@@ -166,6 +135,13 @@ addStudent.addEventListener("click",()=>{
             backLabel.setAttribute("for","back-handspring");form.appendChild(backLabel);
             const backCheck=document.createElement("input");
             backCheck.setAttribute("type","checkbox");form.appendChild(backCheck);
+            const submit=document.createElement("button");
+            submit.innerText="submit";
+            submit.addEventListener("click",()=>{
+                    console("he");
+                    alert(getValue(form)); 
+            });
+            form.appendChild(submit);
             studentMap.set(studentNumber, form);
             switchForm(studentNumber);
             newStudent.addEventListener("click",()=>{
@@ -174,6 +150,16 @@ addStudent.addEventListener("click",()=>{
         }
     }
 );
+function getValue(form){
+    const children=form.getChildNodes();
+    let s="";
+    for(let i=0;i<children.length;i++){
+        if(children[i].nodeName=="BUTTON"||children[i].nodeName=="SELECT"){
+            s+=children[i].getName()+" "+children[i].getValue()+" ";
+        }
+    }
+    return s;
+}
 function switchForm(num){
     const oldForm=judgingForm.children;
     for(let i=0;i<oldForm.length;i++){
