@@ -149,7 +149,9 @@ addStudent.addEventListener("click",()=>{
             const backLabel=document.createElement("label");backLabel.innerText="Back Handspring";
             backLabel.setAttribute("for","back-handspring");form.appendChild(backLabel);
             const backCheck=document.createElement("input");
-            backCheck.setAttribute("type","checkbox");form.appendChild(backCheck);
+            backCheck.setAttribute("type","checkbox");
+            backCheck.setAttribute("name","back-handspring");
+            backCheck.setAttribute("class","data");form.appendChild(backCheck);
             const submit=document.createElement("button");
             submit.innerText="submit";
             submit.setAttribute("type","button");
