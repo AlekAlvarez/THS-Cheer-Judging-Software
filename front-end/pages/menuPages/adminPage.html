@@ -9,12 +9,19 @@
     <body>
         <script src="adminPage.js"></script>
         <div>Input Admin Password to Upload and Download excel Files</div>
-        <input type="password">
-        <button></button>
+        <input type="password" id="admin-password">
+        <button type="button">Submit</button>
         <div class="container">
             <div id="upload-button">
                 Upload Your File Here
                 <input type="file" id="excel" name="judgeData.excel" accept="excel/">
+            </div>
+            <div id="upload-coachScore">
+                Upload Coach upload
+                <label for="contestant-number">Contestant Number</label>
+                <input type="number" name="contestant-number" id="contestant-number">
+                <label for="contestant-score">Contestant Score</label>
+                <input type="number" name="contestant-score" id="contestant-score">
             </div>
             <div id="download-button">
                 <a href="NotApproved" download="judgeData.excel" target="_blank">Download Your File Here</a>
