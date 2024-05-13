@@ -155,12 +155,13 @@ addStudent.addEventListener("click",()=>{
             submit.setAttribute("type","button");
             submit.addEventListener("click",()=>{
                 const data=form.getElementsByClassName("data");
-                let s="";
+                let s="Contestant "; s+=studentNumber+" ";
                 for(let i=0;i<data.length;i++){
                     s+=data[i].getAttribute("name")+" "+data[i].value+" ";
                 }
                 studentTabs.removeChild(newStudent);
                 switchForm(0);
+                console.log(s);
                 // send(s);
             });
              form.appendChild(submit);
@@ -173,7 +174,7 @@ addStudent.addEventListener("click",()=>{
     }
 );
 function getValue(collection){
-    let s="";
+    let s=""+studentNumber+' ';
     console.log(collection);
     for(let i=0;i<collection.length;i++){
         console.log(collection[i]);
@@ -185,7 +186,8 @@ function switchForm(num){
     const oldForm=judgingForm.children;
     for(let i=0;i<oldForm.length;i++){
         judgingForm.removeChild(oldForm[i]);
-    }
+    } 
+    if(studentMap.has(num))
     judgingForm.appendChild(studentMap.get(num));
 }
 function addOptions(optionNumbers,parentNode){
