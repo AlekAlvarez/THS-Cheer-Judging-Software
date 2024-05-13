@@ -159,7 +159,7 @@ addStudent.addEventListener("click",()=>{
                 const data=form.getElementsByClassName("data");
                 let s="Contestant "; s+=studentNumber+" ";
                 for(let i=0;i<data.length;i++){
-                    s+=data[i].getAttribute("name")+" "+data[i].value+" ";
+                    s+=data[i].value+" ";
                 }
                 studentTabs.removeChild(newStudent);
                 switchForm(0);
