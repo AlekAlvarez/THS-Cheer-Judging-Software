@@ -63,7 +63,7 @@ addStudent.addEventListener("click",()=>{
             const bandCadenceLabel=document.createElement("label");
             bandCadenceLabel.innerText="Knowledge of Cadence";bandCadenceLabel.setAttribute("for","band-cadence");
             form.appendChild(bandCadenceLabel); const bandCadenceSelect=document.createElement("select");bandCadenceSelect.setAttribute("name","band-cadence");
-            bandCadenceSelect.setAttribute("name","band-cadence"); bandCadenceSelect.setAttribute("name","data");
+            bandCadenceSelect.setAttribute("name","band-cadence"); bandCadenceSelect.setAttribute("class","data");
             addOptions(5,bandCadenceSelect); form.appendChild(bandCadenceSelect);
             const bandEnergyLabel=document.createElement("label");
             bandEnergyLabel.innerText="Showmanship/Energy";bandEnergyLabel.setAttribute("for","band-energy");
@@ -90,7 +90,7 @@ addStudent.addEventListener("click",()=>{
             const situationalMotion=document.createElement("label");situationalMotion.innerText="Motions (Technique & Sharpness)";
             situationalMotion.setAttribute("for","situational-motion");form.appendChild(situationalMotion);
             const situationalMotionSelect=document.createElement("select");situationalMotionSelect.setAttribute("name","situational-motion");
-            situationalMotionSelect.setAttribute('class','name');
+            situationalMotionSelect.setAttribute("class","data");
             addOptions(5,situationalMotionSelect);form.appendChild(situationalMotionSelect);
             const sideChant=document.createElement("label");sideChant.innerText="Knowledge of Chant";
             sideChant.setAttribute("for","side-chant");form.appendChild(sideChant);
