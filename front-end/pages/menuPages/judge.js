@@ -157,7 +157,7 @@ addStudent.addEventListener("click",()=>{
             submit.setAttribute("type","button");
             submit.addEventListener("click",()=>{
                 const data=form.getElementsByClassName("data");
-                let s="Contestant "; s+=studentNumber+" ";
+                let s="Contestant "; s+=mainLegend.innerText.substring(19)+" ";
                 for(let i=0;i<data.length;i++){
                     s+=data[i].value+" ";
                 }
